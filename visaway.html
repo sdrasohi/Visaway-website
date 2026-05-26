@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visaway | متخصص ویزای دانشجویی اسپانیا</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Vazirmatn',sans-serif;background:#fff;color:#1a1a1a;direction:rtl}
+:root{
+  --gold:#C9A030;
+  --gold-light:#F0C84A;
+  --navy:#0D1B4B;
+  --navy-mid:#1A2E6B;
+  --light:#F4F6FB;
+  --gray:#6B6B6B;
+  --border:#E2E6F0;
+}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 52px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:99}
+.logo-text{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:-0.3px}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--gray);font-size:14px;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;font-family:'Vazirmatn',sans-serif;cursor:pointer;transition:background .2s}
+.nav-cta:hover{background:var(--navy-mid)}
+
+.hero{display:grid;grid-template-columns:55% 45%;min-height:86vh;align-items:center}
+.hero-text{padding:80px 52px 80px 60px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--light);border:1px solid var(--border);padding:6px 16px;border-radius:100px;font-size:12px;color:var(--gray);margin-bottom:28px}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+h1{font-size:46px;font-weight:700;line-height:1.2;color:var(--navy);margin-bottom:20px;letter-spacing:-1px}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:17px;color:var(--gray);line-height:1.75;margin-bottom:40px;max-width:430px;font-weight:300}
+.hero-actions{display:flex;gap:12px;align-items:center}
+.btn-primary{background:var(--navy);color:#fff;border:none;padding:14px 28px;border-radius:10px;font-size:15px;font-family:'Vazirmatn',sans-serif;cursor:pointer;font-weight:500;transition:background .2s}
+.btn-primary:hover{background:var(--navy-mid)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border);padding:14px 28px;border-radius:10px;font-size:15px;font-family:'Vazirmatn',sans-serif;cursor:pointer;transition:all .2s}
+.btn-outline:hover{border-color:var(--navy)}
+
+.hero-visual{background:var(--light);height:100%;display:flex;align-items:center;justify-content:center;padding:48px 40px}
+.info-card{background:#fff;border-radius:18px;border:1px solid var(--border);padding:28px;width:100%;max-width:300px}
+.card-header{display:flex;align-items:center;gap:10px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.flag-es{display:flex;flex-direction:column;width:32px;border-radius:4px;overflow:hidden;flex-shrink:0}
+.flag-stripe{height:7px}
+.card-title{font-size:15px;font-weight:700;color:var(--navy)}
+.card-sub{font-size:12px;color:var(--gray)}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.stat{background:var(--light);border-radius:10px;padding:14px 12px;text-align:center}
+.stat-n{font-size:20px;font-weight:700;color:var(--gold)}
+.stat-l{font-size:11px;color:var(--gray);margin-top:2px;line-height:1.3}
+.visa-label{font-size:11px;color:var(--gray);margin-bottom:8px;font-weight:500}
+.visa-tags{display:flex;flex-wrap:wrap;gap:6px}
+.vtag{background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px 12px;font-size:11px;color:var(--navy);font-weight:500}
+.vtag.highlight{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+.trust-bar{display:flex;align-items:center;justify-content:center;gap:48px;padding:24px 52px;border-bottom:1px solid var(--border);background:#fff;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray)}
+.trust-icon{width:18px;height:18px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;flex-shrink:0}
+
+section{padding:76px 52px}
+.section-label{font-size:11px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px}
+h2{font-size:34px;font-weight:700;color:var(--navy);margin-bottom:14px;letter-spacing:-0.5px}
+.section-sub{font-size:16px;color:var(--gray);max-width:500px;line-height:1.7;font-weight:300}
+
+.services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc-card{background:#fff;border-radius:14px;border:1px solid var(--border);padding:26px;transition:border-color .2s,transform .2s}
+.svc-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.svc-num{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
+.svc-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.svc-desc{font-size:13px;color:var(--gray);line-height:1.7}
+
+.process{background:#fff}
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative}
+.steps-row::after{content:'';position:absolute;top:21px;right:12.5%;left:12.5%;height:1px;background:var(--border);z-index:0}
+.step{text-align:center;padding:0 12px;position:relative;z-index:1}
+.step-bubble{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.step-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.step-desc{font-size:12px;color:var(--gray);line-height:1.6}
+
+.cases{background:var(--light)}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.case-card{background:#fff;border-radius:14px;border:1px solid var(--border);padding:24px}
+.case-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0}
+.case-name{font-size:14px;font-weight:700;color:var(--navy)}
+.case-tag{font-size:11px;color:var(--gold);font-weight:600;margin-top:2px}
+.quote-mark{font-size:28px;color:var(--gold);line-height:1;margin-bottom:6px;font-family:Georgia,serif}
+.case-text{font-size:13px;color:var(--gray);line-height:1.7;font-style:italic}
+
+.cta-section{background:var(--navy);padding:72px 52px;text-align:center}
+.cta-section h2{color:#fff;margin-bottom:12px;font-size:32px}
+.cta-sub{font-size:16px;color:rgba(255,255,255,.55);max-width:440px;margin:0 auto 36px;line-height:1.7;font-weight:300}
+.cta-form{display:flex;gap:10px;max-width:440px;margin:0 auto;direction:rtl}
+.cta-input{flex:1;padding:14px 18px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font-size:14px;font-family:'Vazirmatn',sans-serif;outline:none}
+.cta-input::placeholder{color:rgba(255,255,255,.35)}
+.cta-btn{background:var(--gold);color:#fff;border:none;padding:14px 22px;border-radius:10px;font-size:14px;font-family:'Vazirmatn',sans-serif;cursor:pointer;font-weight:600;white-space:nowrap}
+
+footer{background:#090f28;color:rgba(255,255,255,.4);padding:28px 52px;display:flex;justify-content:space-between;align-items:center;font-size:13px;flex-wrap:wrap;gap:12px}
+.footer-brand{color:#fff;font-size:16px;font-weight:700}
+.footer-brand span{color:var(--gold)}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;margin-right:20px;transition:color .2s}
+.footer-links a:hover{color:#fff}
+
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-text{padding:48px 20px 32px}
+  h1{font-size:32px}
+  .hero-visual{padding:32px 20px}
+  .trust-bar{gap:20px;padding:20px}
+  section{padding:52px 20px}
+  .services-grid{grid-template-columns:1fr}
+  .steps-row{grid-template-columns:1fr 1fr;gap:24px}
+  .steps-row::after{display:none}
+  .cases-grid{grid-template-columns:1fr}
+  .cta-form{flex-direction:column}
+  footer{padding:24px 20px;flex-direction:column;text-align:center}
+  .footer-links{margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-text">Visa<span>away</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">خدمات</a></li>
+    <li><a href="#process">مراحل</a></li>
+    <li><a href="#cases">موفقیت‌ها</a></li>
+    <li><a href="#contact">تماس</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">مشاوره رایگان</button>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-badge"><div class="dot"></div>متخصص ویزای دانشجویی اسپانیا</div>
+    <h1>مسیر تحصیل در<br><em>اسپانیا</em> را<br>با ما بیابید</h1>
+    <p class="hero-sub">Visaway متخصص ویزای دانشجویی اسپانیاست. از پذیرش دانشگاه تا دریافت ویزا، هر قدم را با شما همراهیم.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">مشاوره رایگان</button>
+      <button class="btn-outline" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">نمونه پرونده‌ها</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="info-card">
+      <div class="card-header">
+        <div class="flag-es">
+          <div class="flag-stripe" style="background:#c60b1e"></div>
+          <div class="flag-stripe" style="background:#f1bf00;height:14px"></div>
+          <div class="flag-stripe" style="background:#c60b1e"></div>
+        </div>
+        <div>
+          <div class="card-title">اسپانیا · España</div>
+          <div class="card-sub">عضو شنگن · اتحادیه اروپا</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-n">۲-۳</div><div class="stat-l">ماه پردازش پذیرش</div></div>
+        <div class="stat"><div class="stat-n">۳-۶</div><div class="stat-l">ماه پردازش ویزا</div></div>
+      </div>
+      <div class="visa-label">تخصص ما</div>
+      <div class="visa-tags">
+        <span class="vtag highlight">Student Visa</span>
+        <span class="vtag">Non-Lucrative</span>
+        <span class="vtag">Digital Nomad</span>
+        <span class="vtag">Golden Visa</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-icon">✓</div>مشاوره رایگان</div>
+  <div class="trust-item"><div class="trust-icon">✓</div>شفافیت کامل در مراحل</div>
+  <div class="trust-item"><div class="trust-icon">✓</div>پشتیبانی پس از اقامت</div>
+  <div class="trust-item"><div class="trust-icon">✓</div>بدون هزینه‌ی پنهان</div>
+</div>
+
+<section class="services" id="services">
+  <div class="section-label">خدمات ما</div>
+  <h2>هرچه برای تحصیل در اسپانیا نیاز دارید</h2>
+  <p class="section-sub">Visaway تمام مراحل را از ابتدا تا انتها مدیریت می‌کند.</p>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-num">۰۱</div>
+      <div class="svc-title">ارزیابی پرونده</div>
+      <p class="svc-desc">بررسی مدارک تحصیلی و شرایط شما برای انتخاب بهترین دانشگاه و رشته در اسپانیا.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">۰۲</div>
+      <div class="svc-title">پذیرش دانشگاه</div>
+      <p class="svc-desc">راهنمایی در انتخاب دانشگاه، ارسال درخواست و پیگیری پذیرش در ۲ تا ۳ ماه.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">۰۳</div>
+      <div class="svc-title">آماده‌سازی مدارک</div>
+      <p class="svc-desc">چک‌لیست کامل، ترجمه رسمی، تأیید و آماده‌سازی تمام مستندات لازم برای ویزا.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">۰۴</div>
+      <div class="svc-title">ثبت درخواست ویزا</div>
+      <p class="svc-desc">پیگیری و ثبت درخواست Student Visa در کنسولگری اسپانیا با حداکثر دقت.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">۰۵</div>
+      <div class="svc-title">استقرار در اسپانیا</div>
+      <p class="svc-desc">کمک در اجاره خانه، ثبت‌نام شهرداری، حساب بانکی و دریافت NIE.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-num">۰۶</div>
+      <div class="svc-title">تمدید اقامت</div>
+      <p class="svc-desc">مدیریت تمدید به‌موقع و راهنمایی در مسیر رسیدن به اقامت دائم پس از تحصیل.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="section-label">مراحل کار</div>
+  <h2>چهار قدم تا تحصیل در اسپانیا</h2>
+  <p class="section-sub">فرآیند Visaway ساده، شفاف و قابل پیش‌بینی است.</p>
+  <div class="steps-row">
+    <div class="step">
+      <div class="step-bubble">۱</div>
+      <div class="step-title">مشاوره اولیه</div>
+      <p class="step-desc">بررسی وضعیت و انتخاب دانشگاه و رشته مناسب</p>
+    </div>
+    <div class="step">
+      <div class="step-bubble">۲</div>
+      <div class="step-title">پذیرش دانشگاه</div>
+      <p class="step-desc">ارسال درخواست و دریافت پذیرش در ۲ تا ۳ ماه</p>
+    </div>
+    <div class="step">
+      <div class="step-bubble">۳</div>
+      <div class="step-title">ارسال پرونده ویزا</div>
+      <p class="step-desc">آماده‌سازی مدارک و ثبت درخواست Student Visa</p>
+    </div>
+    <div class="step">
+      <div class="step-bubble">۴</div>
+      <div class="step-title">شروع تحصیل</div>
+      <p class="step-desc">پرواز به اسپانیا و آغاز زندگی دانشجویی با پشتیبانی Visaway</p>
+    </div>
+  </div>
+</section>
+
+<section class="cases" id="cases">
+  <div class="section-label">نمونه موفق</div>
+  <h2>داستان‌های واقعی</h2>
+  <p class="section-sub">دانشجویانی که با کمک Visaway به اسپانیا رفتند.</p>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-top">
+        <div class="avatar">سر</div>
+        <div>
+          <div class="case-name">سارا رضایی</div>
+          <div class="case-tag">Student Visa · بارسلونا</div>
+        </div>
+      </div>
+      <div class="quote-mark">"</div>
+      <p class="case-text">پذیرشم در ۲.۵ ماه گرفته شد و ویزام هم خیلی سریع صادر شد. Visaway همه چیز رو مدیریت کرد.</p>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="avatar">کم</div>
+        <div>
+          <div class="case-name">کامران محمدی</div>
+          <div class="case-tag">Student Visa · مادرید</div>
+        </div>
+      </div>
+      <div class="quote-mark">"</div>
+      <p class="case-text">نگران مدارک بودم ولی تیم Visaway قدم به قدم راهنماییم کرد. الان دارم MBA می‌خونم.</p>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="avatar">نه</div>
+        <div>
+          <div class="case-name">نگار هاشمی</div>
+          <div class="case-tag">Student Visa · والنسیا</div>
+        </div>
+      </div>
+      <div class="quote-mark">"</div>
+      <p class="case-text">از انتخاب دانشگاه تا رسیدن به والنسیا، Visaway کنارم بود. تجربه‌ی خیلی خوبی داشتم.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="section-label" style="color:rgba(255,255,255,.4)">مشاوره رایگان</div>
+  <h2>همین امروز شروع کنید</h2>
+  <p class="cta-sub">شماره یا ایمیل‌تان را بگذارید تا کارشناسان Visaway با شما تماس بگیرند.</p>
+  <div class="cta-form">
+    <input class="cta-input" type="text" placeholder="شماره موبایل یا ایمیل">
+    <button class="cta-btn">درخواست مشاوره</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Visa<span>away</span></div>
+  <div>© ۱۴۰۴ Visaway · تمام حقوق محفوظ است</div>
+  <div class="footer-links">
+    <a href="#">اینستاگرام</a>
+    <a href="#">واتساپ</a>
+    <a href="#">تلگرام</a>
+  </div>
+</footer>
+
+</body>
+</html>
